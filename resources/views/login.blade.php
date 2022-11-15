@@ -5,12 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>WebGram</title>
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 
     </head>
     <body>
-        <div class="logo">
+       <div class= "container">
+        <div class = "logo">
+        <img class="img" src=" {{asset('imgs/webgram-logo.png') }}">
+</div>
+</div> 
 
-        </div>
+        
     </body>
 </html>
