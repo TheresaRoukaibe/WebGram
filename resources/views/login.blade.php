@@ -26,7 +26,7 @@
 
 <div style="text-align:center">
     <h1 class="separator" > </h1>
-    <h3 class="signup">Don't have an account? <span class="link">Click Me </span> to sign up! </h3>
+    <h3 class="signup">Don't have an account? <a href="/signup" class="link"> Click Me </a> to sign up! </h3>
 </div> 
 </div>
 
