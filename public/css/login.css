@@ -9,33 +9,112 @@ html, body{
 .container{
     height:100%;
     width:100%;
+    display:flex;
 }
 
 .logo{
-float:left;
 width: 50%;
 height: 100%;
 left: -265px;
 top: -194.78px;
-display: flex;
+flex: 1;
 background: #A5CAEC;
 box-shadow: 30px 0px 4px rgba(0, 0, 0, 0.25);
 transform: rotate(-0.13deg);
 }
 
+.title{
+    margin: 0 auto;
+width: 195px;
+height: 82px;
+font-family: 'Arial';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 73px;
+text-align: center;
+color: #000000;
+top:40%;
+}
+
 .login{
-float:left;
+
 width: 50%;
 height: 100%;
-display: flex;
-border: 2px;
+flex: 1;
 }
 
 .img{
-width: 695px;
+width: 600px;
 height: 504px;
 justify-content: center;
 left: 25px;
 top: 248px;
-display:flex;
+flex: 1;
+}
+
+.line{
+margin: 0 auto;
+width: 112px;
+height: 0px;
+border: 5px solid #4556EB;
+box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+
+
+}
+.button {
+
+height: 50px;
+width:100px;
+color:white;
+background-color: #4556EB;
+border-radius: 15px;
+border:none;
+margin-bottom: 2%;
+
+}
+
+.input{
+margin-top: 2%;
+width: 65%;
+height: 10%;
+margin-bottom: 1%;
+background: #D6E5F2;
+border-radius: 10px;
+border:none;
+margin-left:15%
+}
+
+.separator{
+margin-top: 2%;
+margin: 0 auto;
+width: 300px;
+height: 0px;
+left: 984px;
+top: 689px;
+
+border: 1px solid #000000;
+}
+
+.signup{
+   
+width: 677px;
+height: 45px;
+left: 738px;
+top: 793px;
+
+font-family: 'Arial';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 45px;
+
+text-align: center;
+
+color: #4556EB;
+}
+
+.link{
+    color: #A5CAEC;
+    text-decoration-line: underline;
 }
