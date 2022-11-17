@@ -328,6 +328,7 @@ display-flex, .form-flex, .form-row, .add-info-link {
     padding: 16px 50px;
     float: right;
     border: none;
+    border-radius:10px;
     margin-top: 37px;
     cursor: pointer; }
     .form-submit:hover {

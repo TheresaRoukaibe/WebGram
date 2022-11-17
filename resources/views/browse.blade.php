@@ -10,16 +10,14 @@
 
 <body>
     <input type="radio" name="photos" id="check1" checked>
-    <input type="radio" name="photos" id="check2">
-    <input type="radio" name="photos" id="check3">
+    <input type="radio" name="photos" id="check2" >
+
 
     <div class="container">
         <h1> What People Are Sharing </h1>
         <div class="top-content">
             <h3> Your Feed</h3>
-            <label for="check1"> All Posts </label>
-            <label for="check2"> Your Posts </label>
-            <label for="check3"> Your Profile </label>
+            <label for="check2"> <a href="/profile"> Your Profile </a> </label>
         </div>
 
         <div class="photo-gallery">
@@ -29,17 +27,12 @@
 
             </div>
        
-
-        <div class="pic my-posts">
-                <img src="imgs/webgram-logo.png" >
-                <h5> This is a mypost description </h5>
-                
        </div>
-
-        <div class="profile">
-          
-        </div>
-       </div>
+       
     </div>
+
+    <div class="btn">
+    <a href="/add_post" class="round-button">ADD</a>
+</div>
 </body>
 </html>

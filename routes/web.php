@@ -25,4 +25,11 @@ Route::get('browse', function () {
     return view('browse');
 });
 
+Route::get('profile', function () {
+    return view('profile');
+});
+
+Route::get('add_post', function () {
+    return view('add_post');
+});
 

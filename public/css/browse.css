@@ -139,20 +139,30 @@ transition : .3s;
     opacity :1;
 }
 
-#check1:checked ~ .container .photo-gallery .pic{
-opacity:1 ;
-transform: scale(1);
-position:relative;
-transition: .5s;
+.round-button {
+    display:block;
+    width:80px;
+    height:80px;
+    line-height:80px;
+    border: 2px solid #f5f5f5;
+    border-radius: 50%;
+    color:#f5f5f5;
+    text-align:center;
+    text-decoration:none;
+    background: #A5CAEC;
+    box-shadow: 0 0 3px gray;
+    font-size:20px;
+    font-weight:bold;
+}
+.round-button:hover {
+    background: #4556EB;
 }
 
-#check2:checked ~ .container .photo-gallery .my-posts{
-    opacity:1 ;
-    transform: scale(1);
-    position:relative;
-    
-    }
-
+.btn{
+    margin-top: 50px;
+    margin-left: 50%;
+    justify-content:center;
+}
 
 @keyframes animate{
     0%{
