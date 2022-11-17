@@ -21,4 +21,8 @@ Route::get('signup', function () {
     return view('signup');
 });
 
+Route::get('browse', function () {
+    return view('browse');
+});
+
 
