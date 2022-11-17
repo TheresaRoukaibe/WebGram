@@ -1,0 +1,45 @@
+
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: rgb(148, 197, 243);
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  
+}
+
+.form {
+  width: 50%;
+  align-self: center;
+  margin-left: 30%;
+  margin-right: 30%;
+  background-color: lightblue;
+  height:400px;
+  justify-content: center;
+  BORDER-RADIUS:10PX;
+  margin-top: 30PX;
+}
+
+.file-upload-field{
+    justify-content: center;
+        margin-left: 20%;
+        margin-right:20%;
+        width: auto;
+        background: #4556EB;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 900;
+        padding: 16px 50px;
+        float: right;
+        border: none;
+        border-radius:10px;
+        margin-top: 37px;
+        cursor: pointer; 
+}
+
