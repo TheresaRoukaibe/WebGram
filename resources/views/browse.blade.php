@@ -16,29 +16,30 @@
     <div class="container">
         <h1> What People Are Sharing </h1>
         <div class="top-content">
-            <h1> Your Feed</h1>
+            <h3> Your Feed</h3>
             <label for="check1"> All Posts </label>
             <label for="check2"> Your Posts </label>
             <label for="check3"> Your Profile </label>
         </div>
 
-        <div class="photo gallery">
+        <div class="photo-gallery">
             <div class="pic">
                 <img src="imgs/webgram-logo.png" >
+                <h5> This is a description </h5>
 
             </div>
-        </div>
+       
 
-        <div class="my posts">
-            <div class="pic">
+        <div class="pic my-posts">
                 <img src="imgs/webgram-logo.png" >
+                <h5> This is a mypost description </h5>
                 
-            </div>
-        </div>
+       </div>
 
         <div class="profile">
           
         </div>
+       </div>
     </div>
 </body>
 </html>
