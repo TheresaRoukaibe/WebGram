@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Profile;
 use App\Http\Controllers\ProfileController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -22,5 +23,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::group(["prefix"=> "v0.1"], function(){
     Route::get("/profile", [ProfileController::class, "getAllProfiles"]);
+    
+    Route::post("/register",[ProfileController::class, "register"] );
+    
 
 });
