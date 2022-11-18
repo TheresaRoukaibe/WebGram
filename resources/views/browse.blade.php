@@ -17,13 +17,16 @@
 
         <h1> What People Are Sharing </h1>
         <div class="top-content">
-            <h3> Your Feed</h3>
-            <label for="check2"> <a href="/profile"> Your Profile </a> </label>
+            <h3> Feed</h3>
+            <div class="profile">
+            <label for="check2"> <a  href="/profile"> Edit Your Profile </a> </label>
+</div>
         </div>
 
+        
+        <div class="photo-gallery">
         @php($pictures = \App\Models\Post::All())
                 @foreach ($pictures as $post)
-        <div class="photo-gallery">
             <div class="pic">
  
                 <img src="{{asset($post->url) }}">
@@ -31,9 +34,9 @@
                
 
             </div>
-           
+            @endforeach
        </div>
-       @endforeach
+       
     </div>
 
     <div class="btn">
