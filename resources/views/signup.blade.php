@@ -20,21 +20,28 @@
                     <div class="title">
                     <h1> REGISTER AND START SHARING </h1>
 </div>
-                    <form method="POST" id="signup-form" class="signup-form">
+                    <form method="POST" action ="signup" id="signup-form" class="signup-form">
+                        @if(Session::has('fail'))
+                        <div class="alert alert-fail">{{Session::get('fail')}}</div>
+                        @endif
+                        @csrf
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="first_name">First name</label>
-                                <input type="text" class="form-input" name="first_name" id="first_name" />
+                                <input type="text" class="form-input" name="fname" id="fname" required/>
+                                <span class="text-danger">@error('fname') {{$message}} @enderror</span>
                             </div>
                             <div class="form-group">
                                 <label for="last_name">Last name</label>
-                                <input type="text" class="form-input" name="last_name" id="last_name" />
+                                <input type="text" class="form-input" name="lname" id="lname" required/>
+                                <span class="text-danger">@error('lname') {{$message}} @enderror</span>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group form-icon">
                                 <label for="birth_date">Birth date</label>
-                                <input type="text" class="form-input" name="birth_date" id="birth_date" placeholder="MM-DD-YYYY" />
+                                <input type="text" class="form-input" name="birthdate" id="birthdate" placeholder="MM-DD-YYYY" required/>
+                                <span class="text-danger">@error('birthdate') {{$message}} @enderror</span>
                             </div>
                             <div class="form-radio">
                                 <label for="gender">Gender</label>
@@ -49,16 +56,19 @@
                         </div>
                         <div class="form-group">
                             <label for="phone_number">Phone number</label>
-                            <input type="number" class="form-input" name="phone_number" id="phone_number" />
+                            <input type="number" class="form-input" name="phonenumber" id="phonenumber" required/>
+                            <span class="text-danger">@error('phonenumber') {{$message}} @enderror</span>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="text">Email</label>
-                                <input type="text" class="form-input" name="email" id="email"/>
+                                <input type="text" class="form-input" name="email" id="email" required/>
+                                <span class="text-danger">@error('email') {{$message}} @enderror</span>
                             </div>
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-input" name="password" id="password"/>
+                                <input type="password" class="form-input" name="password" id="password" required/>
+                                <span class="text-danger">@error('password') {{$message}} @enderror</span>
                             </div>
                         </div>
                         

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('login');
+});
+
+Route::get('/login', function () {
     return view('login');
 });
 
@@ -32,4 +37,8 @@ Route::get('profile', function () {
 Route::get('add_post', function () {
     return view('add_post');
 });
+
+Route::post('signup', [ProfileController::class, "register"] );
+Route::post('login', [ProfileController::class], "login");
+
 

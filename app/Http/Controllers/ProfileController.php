@@ -10,9 +10,16 @@ class ProfileController extends Controller
 {
     
 
-    
+    function login(){
+
+    }
 
     function register(Request $request){
+
+        $request->validate([
+            'email' => 'required|email|unique:profiles'
+        ]);
+     
         $user = new Profile;
         $user->fname = $request->input("fname");
         $user->lname = $request->input("lname");
@@ -22,8 +29,11 @@ class ProfileController extends Controller
         $user->email = $request->input("email");
         $user->password = Hash::make($request->input("lname"));
 
-        $user->save();
+       $result =  $user->save();
+       if($result){
         return redirect("browse");
-
+    }else{
+        return back()->with('fail', 'Could not register user :(');
+    }
     }
 }

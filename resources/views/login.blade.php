@@ -15,15 +15,18 @@
         <img class="img" src=" {{asset('imgs/webgram-logo.png') }}">
 </div>
 
-<div class = "login">
+<form method="POST" action="login" class="login" style="text-align:center">
+
    <h1 class="title"> SIGN IN <h1>  
     <h1 class = "line"> </h1>
     <input class ="input" type="text" placeholder="Email..." name="email" required>
+    <span class="text-danger">@error('email') {{$message}} @enderror</span>
     <input class ="input" type="password" placeholder="Password..." name="pass" required>
+    <span class="text-danger">@error('pass') {{$message}} @enderror</span>
     <div style="text-align:center">
-    <button class="button" type="button">SUBMIT</button>
-</div>
+    <button type="submit" name="submit" id="submit" class="button" type="button">SUBMIT</button>
 
+</form>
 <div style="text-align:center">
     <h1 class="separator" > </h1>
     <h3 class="signup">Don't have an account? <a href="/signup" class="link"> Click Me </a> to sign up! </h3>
