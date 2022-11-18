@@ -9,9 +9,10 @@
 </head>
 <body>
 <div class="container">
-  <form class="form">
+  <form class="form" method="POST" action="{{'add'}}" >
+    @csrf
     <div class="file-upload-wrapper" data-text="Select your file!">
-      <input name="file-upload-field" type="file" class="file-upload-field" value="">
+    <input type="text" class="file-upload-field" name="url" id="url" />
       <div>
       <label for="desc"  class="file-upload-field">Describe your picture</label>
       
@@ -19,7 +20,7 @@
     </div>
     <input type="text" class="file-upload-field" name="desc" id="desc" />
     <div class="form-group">
-                            <input type="submit" name="submit" id="submit" class="file-upload-field" value="POST"/>
+        <input type="submit" name="submit" id="submit" class="file-upload-field" value="POST"/>
                         </div>
   </form>
 </div>

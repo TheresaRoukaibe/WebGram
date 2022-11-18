@@ -17,11 +17,15 @@
 
 <form method="POST" action="login" class="login" style="text-align:center">
 
+@csrf 
    <h1 class="title"> SIGN IN <h1>  
+   @if(Session::has('fail'))
+<div class="alert alert-fail">{{Session::get('fail')}}</div>
+@endif
     <h1 class = "line"> </h1>
     <input class ="input" type="text" placeholder="Email..." name="email" required>
     <span class="text-danger">@error('email') {{$message}} @enderror</span>
-    <input class ="input" type="password" placeholder="Password..." name="pass" required>
+    <input class ="input" type="password" placeholder="Password..." name="password" required>
     <span class="text-danger">@error('pass') {{$message}} @enderror</span>
     <div style="text-align:center">
     <button type="submit" name="submit" id="submit" class="button" type="button">SUBMIT</button>

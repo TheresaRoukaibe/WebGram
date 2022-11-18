@@ -39,6 +39,7 @@ Route::get('add_post', function () {
 });
 
 Route::post('signup', [ProfileController::class, "register"] );
-Route::post('login', [ProfileController::class], "login");
+Route::post('login', [ProfileController::class, "login"]);
+Route::post('add', [ProfileController::class, "add"]);
 
 

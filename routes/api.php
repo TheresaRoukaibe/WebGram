@@ -23,8 +23,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::group(["prefix"=> "v0.1"], function(){
     Route::get("/profile", [ProfileController::class, "getAllProfiles"]);
-    
     Route::post("/register",[ProfileController::class, "register"] );
-    
-
+    Route::post("/login", [ProfileController::class, "login"]);
+    Route::post("/add", [ProfileController::class, "add"]);
 });

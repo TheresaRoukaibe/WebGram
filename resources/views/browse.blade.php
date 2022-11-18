@@ -14,21 +14,26 @@
 
 
     <div class="container">
+
         <h1> What People Are Sharing </h1>
         <div class="top-content">
             <h3> Your Feed</h3>
             <label for="check2"> <a href="/profile"> Your Profile </a> </label>
         </div>
 
+        @php($pictures = \App\Models\Post::All())
+                @foreach ($pictures as $post)
         <div class="photo-gallery">
             <div class="pic">
-                <img src="imgs/webgram-logo.png" >
-                <h5> This is a description </h5>
+ 
+                <img src="{{asset($post->url) }}">
+                <h5> {{$post->description}} </h5>
+               
 
             </div>
-       
+           
        </div>
-       
+       @endforeach
     </div>
 
     <div class="btn">
