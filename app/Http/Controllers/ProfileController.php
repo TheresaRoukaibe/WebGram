@@ -5,12 +5,27 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Profile;
 use App\Models\Post;
+use App\Models\User_has_like;
 use Illuminate\Support\Facades\Hash;
 use Session;
 
 class ProfileController extends Controller
 {
 
+
+    function like($post_id){
+        $id = Session::get('id');
+        $like = new User_has_like([
+            'user_id' => $id,
+            'post_id' => $post_id,
+        ]);
+        $like->save();
+        $post = Post::find($post_id);
+        $post->like_count = $post->like_count +1; 
+        $post ->save();
+        return redirect("browse");
+
+    }
     function edit($id){
         $profile = Profile::find($id);
         return view('edit-profile', compact('profile'));
