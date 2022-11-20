@@ -33,12 +33,24 @@
  
                 <img src="{{asset($post->url) }}">
                 <h5> {{$post->description}} </h5>
-                @if($post->user_posted == Session::get('id'))
+                <h1 class="border"> </h1>
+            
+                <div>
+                <h6> {{$post->like_count}} <h6>
+                <button type="submit" name="like" id="like" class="button" type="button"><a  href="{{url('/like/'.$post->id)}}"> Like </a></button>
+                </div>
+
+                
+           <form>
+           <input type="text" name="comment" id="comment" placeholder="Leave a comment..." />
+                <button type="submit" name="comment" id="comment" class="button" type="button"><a  href="{{url('/comment/'.$post->id)}}"> Send </a></button>
+           
+           </form>
+           @if($post->user_posted == Session::get('id'))
                 <button type="submit" name="submit" id="submit" class="button" type="button"><a  href="{{url('/delete/'.$post->id)}}"> Delete my post</a></button>
-
-
+                
+                
                 @endif
-
             </div>
             @endforeach
        </div>
