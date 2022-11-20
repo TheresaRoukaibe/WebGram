@@ -30,7 +30,9 @@ Route::get('browse', function () {
     return view('browse');
 });
 
-
+Route::get('hide', function () {
+    return view('hide');
+});
 
 Route::get('add_post', function () {
     return view('add_post');
