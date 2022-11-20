@@ -29,7 +29,10 @@
         <div class="photo-gallery">
         @php($pictures = \App\Models\Post::All())
         @php($mycomms = \App\Models\User_has_comment::All())
+         @php($hides = \App\Models\User_hide::All())
                 @foreach ($pictures as $post)
+
+                
             <div class="pic">
  
                 <img src="{{asset($post->url) }}">
@@ -53,6 +56,7 @@
            @if($post->id == $comm->post_id)
            <h2 class="comments" >{{$comm->comment}}<h2>
            @endif
+           
            @endforeach
 
            @if($post->user_posted == Session::get('id'))
@@ -61,6 +65,7 @@
                 
                 @endif
             </div>
+        
             @endforeach
        </div>
        <div class="btn">
