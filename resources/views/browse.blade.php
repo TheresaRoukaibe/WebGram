@@ -57,7 +57,7 @@
 
            @if($post->user_posted == Session::get('id'))
                 <button type="submit" name="submit" id="submit" class="del" type="button"><a  href="{{url('/delete/'.$post->id)}}"> Delete my post</a></button>
-                
+                <button type="submit" name="hide" id="hide" class="del" type="button"><a  href="{{url('/hide')}}"> Hide my post</a></button>
                 
                 @endif
             </div>

@@ -233,6 +233,7 @@ transition : .3s;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    float:left;
   }
   
   .del:focus {
