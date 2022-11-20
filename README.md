@@ -19,3 +19,12 @@ Webgram is an Instagram-like website where users start by signing in, or registe
 # Database :bar_chart:
 
 You can download the Database design from the db folder in the repository and run it using xampp and phpmyadmin!
+
+# Run the Website on your PC :arrow_down_small:
+1. Clone this project locally
+2. Open your terminal and use the cd command to go to the folder application
+3. Run composer install
+4. Creat a copy of the .env file
+5. Run php artisan migrate
+6. Run php artisan serve on your terminal
+7. Go to your browser and open http://127.0.0.1:8000
