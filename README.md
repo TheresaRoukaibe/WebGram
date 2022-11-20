@@ -15,3 +15,7 @@ Webgram is an Instagram-like website where users start by signing in, or registe
 ![Screenshot (48)](https://user-images.githubusercontent.com/102797454/202916641-b63c24bf-cec5-4d30-9c82-f864c1a8657e.png)
 ![Screenshot (49)](https://user-images.githubusercontent.com/102797454/202916647-0ed44520-c188-4b6c-ab18-07c462894e49.png)
 ![Screenshot (51)](https://user-images.githubusercontent.com/102797454/202916652-01c3f101-fa88-42de-926c-44365dfdbdd5.png)
+
+# Database :bar_chart:
+
+You can download the Database design from the db folder in the repository and run it using xampp and phpmyadmin!
