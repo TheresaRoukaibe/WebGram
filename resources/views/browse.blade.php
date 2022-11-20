@@ -36,6 +36,7 @@
                 <h1 class="border"> </h1>
             
                 <div>
+                <img src="imgs/like.png" style="height:30px; width:30px">
                 <h6> {{$post->like_count}} <h6>
                 <button type="submit" name="like" id="like" class="like-button" type="button"><a  href="{{url('/like/'.$post->id)}}"> Like </a></button>
                 </div>
