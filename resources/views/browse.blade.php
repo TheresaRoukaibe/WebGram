@@ -28,6 +28,7 @@
         
         <div class="photo-gallery">
         @php($pictures = \App\Models\Post::All())
+        @php($mycomms = \App\Models\User_has_comment::All())
                 @foreach ($pictures as $post)
             <div class="pic">
  
@@ -42,10 +43,17 @@
                 </div>
 
 
-           <form style="margin-top:10px">
+           <form method="GET" action="{{url('/comment/'.$post->id)}}" style="margin-top:10px">
            <input class="content" type="text" name="comment" id="comment" placeholder="Leave a comment..." />
-                <button type="submit" name="comment" id="comment" class="comm-button" type="button"><a  href="{{url('/comment/'.$post->id)}}"> Send </a></button>
+                <button type="submit"  class="like-button" type="button">Send</button>
            </form>
+
+@foreach ($mycomms as $comm)
+           @if($post->id == $comm->post_id)
+           <h2 class="comments" >{{$comm->comment}}<h2>
+           @endif
+           @endforeach
+
            @if($post->user_posted == Session::get('id'))
                 <button type="submit" name="submit" id="submit" class="del" type="button"><a  href="{{url('/delete/'.$post->id)}}"> Delete my post</a></button>
                 

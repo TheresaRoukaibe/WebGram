@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Profile;
 use App\Models\Post;
 use App\Models\User_has_like;
+use App\Models\User_has_comment;
 use Illuminate\Support\Facades\Hash;
 use Session;
 
@@ -26,6 +27,20 @@ class ProfileController extends Controller
         return redirect("browse");
 
     }
+
+    function comment(Request $request, $post_id){
+        $id = Session::get('id');
+        $input = $request->all();
+        $comm = new User_has_comment([
+            'user_id' => $id,
+            'post_id' => $post_id,
+            'comment' => $input['comment'],
+        ]);
+        $comm->save();
+        return redirect("browse");
+
+    }
+
     function edit($id){
         $profile = Profile::find($id);
         return view('edit-profile', compact('profile'));

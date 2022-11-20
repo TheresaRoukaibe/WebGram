@@ -30,5 +30,5 @@ Route::group(["prefix"=> "v0.1"], function(){
     Route::GET("/update/{id}", [ProfileController::class, "update"]);
     Route::get('/delete/{id}', [ProfileController::class, "delete"]);
     Route::get('/like/{id}', [ProfileController::class, "like"]);
-
+    Route::get('/comment/{id}', [ProfileController::class, "comment"]);
 });

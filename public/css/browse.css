@@ -212,7 +212,11 @@ transition : .3s;
 .round-button:hover {
     background: #4556EB;
 }
-
+.comments{
+ font-size: 12px;
+ font-family: Arial;
+ justify-content: left;
+}
 .del{
     display: flex;
     flex-direction: column;
