@@ -30,9 +30,7 @@ Route::get('browse', function () {
     return view('browse');
 });
 
-Route::get('edit-profile', function () {
-    return view('edit-profile');
-});
+
 
 Route::get('add_post', function () {
     return view('add_post');
@@ -42,4 +40,5 @@ Route::post('signup', [ProfileController::class, "register"] );
 Route::post('login', [ProfileController::class, "login"]);
 Route::post('add', [ProfileController::class, "add"]);
 Route::get('/edit-profile/{id}', [ProfileController::class, "edit"]);
-
+Route::GET('/update/{id}', [ProfileController::class, "update"]);
+Route::get('/delete/{id}', [ProfileController::class, "delete"]);

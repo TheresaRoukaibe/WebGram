@@ -19,7 +19,9 @@
         <div class="top-content">
             <h3> Feed</h3>
             <div class="profile">
+                @csrf
             <label for="check2"> <a  href="{{url('/edit-profile/'.Session::get('id'))}}"> Edit Your Profile </a> </label>
+
 </div>
         </div>
 
@@ -31,7 +33,11 @@
  
                 <img src="{{asset($post->url) }}">
                 <h5> {{$post->description}} </h5>
-               
+                @if($post->user_posted == Session::get('id'))
+                <button type="submit" name="submit" id="submit" class="button" type="button"><a  href="{{url('/delete/'.$post->id)}}"> Delete my post</a></button>
+
+
+                @endif
 
             </div>
             @endforeach

@@ -9,8 +9,8 @@
 	</head>
 	<body>
 		<div class="wrapper">
-            <form action="{{url('/edit-profile/'.$profile->id)}}" method="POST">
-                @csrf
+            <form action="{{url('/update/'.Session::get('id'))}}" method="GET">
+                @csrf 
         		<!-- SECTION 1 -->
                 <h4></h4>
                 <section>
@@ -18,17 +18,17 @@
                 	<div class="form-row">
                             <div class="form-group">
                                 <label for="first_name">First name</label>
-                                <input type="text" value="{{old('fname') ?? $profile->fname}}" class="form-input" name="fname" id="fname" />
+                                <input type="text" value="{{old('fname')}}" class="form-input" name="fname" id="fname" />
                             </div>
                             <div class="form-group">
                                 <label for="last_name">Last name</label>
-                                <input type="text" value="{{old('lname') ?? $profile->lname}}" class="form-input" name="lname" id="lname" />
+                                <input type="text" value="{{old('lname')}}" class="form-input" name="lname" id="lname" />
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group form-icon">
                                 <label for="birth_date">Birth date</label>
-                                <input type="text" value="{{old('birthdate') ?? $profile->birthdate}}" class="form-input" name="birthdate" id="birthdate" placeholder="MM-DD-YYYY" />
+                                <input type="text" value="{{old('birthdate') }}" class="form-input" name="birthdate" id="birthdate" placeholder="MM-DD-YYYY" />
                             </div>
                             <div class="form-radio">
                                 <label for="gender">Gender</label>
@@ -43,7 +43,7 @@
                         </div>
                         <div class="form-group">
                             <label for="phone_number">Phone number</label>
-                            <input type="number" value="{{old('number') ?? $profile->number}}" class="form-input" name="number" id="number" />
+                            <input type="number" value="{{old('number')}}" class="form-input" name="number" id="number" />
                         </div>
                        
                         

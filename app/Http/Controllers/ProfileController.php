@@ -15,6 +15,24 @@ class ProfileController extends Controller
         $profile = Profile::find($id);
         return view('edit-profile', compact('profile'));
     }
+
+    function delete($id){
+        $post = Post::find($id)->delete();
+        return view('browse');
+    }
+
+    function update(Request $request, $id){
+        $input = $request->all();
+        $profile = Profile::find($id);
+        $profile->fname = $input['fname'];
+        $profile->lname = $input['lname'];
+        $profile->birthdate = $input['birthdate'];
+        $profile->number = $input['number'];
+        $profile->gender = $input['gender'];
+        $profile->save();
+        return redirect("browse");
+
+    }
     
 function add(Request $request){
 $id = Session::get('id');
@@ -67,6 +85,7 @@ $id = Session::get('id');
         $user->password = Hash::make($request->input("password"));
 
        $result =  $user->save();
+       $request->session()->put('id', $user->id);
        if($result){
         return redirect("browse");
     }else{

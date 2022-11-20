@@ -26,5 +26,7 @@ Route::group(["prefix"=> "v0.1"], function(){
     Route::post("/register",[ProfileController::class, "register"] );
     Route::post("/login", [ProfileController::class, "login"]);
     Route::post("/add", [ProfileController::class, "add"]);
-    Route::post("/edit", [ProfileController::class, "edit"]);
+    Route::get("/edit-profile/{id}", [ProfileController::class, "edit"]);
+    Route::GET("/update/{id}", [ProfileController::class, "update"]);
+    Route::get('/delete/{id}', [ProfileController::class, "delete"]);
 });
