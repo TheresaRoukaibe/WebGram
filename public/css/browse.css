@@ -225,7 +225,7 @@ transition : .3s;
     font-family: 'Roboto', sans-serif;
     border-radius: 6px;
     border: none;
-  
+  margin-top: 10px;
     color: #fff;
     background: linear-gradient(180deg, #e46852 0%, #dd2a1e 100%);
      background-origin: border-box;

@@ -48,6 +48,7 @@
                 <button type="submit"  class="like-button" type="button">Send</button>
            </form>
 
+           <h1> Comment Box </h1>
 @foreach ($mycomms as $comm)
            @if($post->id == $comm->post_id)
            <h2 class="comments" >{{$comm->comment}}<h2>
