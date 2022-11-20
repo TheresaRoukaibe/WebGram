@@ -46,7 +46,7 @@
                 <button type="submit" name="comment" id="comment" class="comm-button" type="button"><a  href="{{url('/comment/'.$post->id)}}"> Send </a></button>
            </form>
            @if($post->user_posted == Session::get('id'))
-                <button type="submit" name="submit" id="submit" class="button" type="button"><a  href="{{url('/delete/'.$post->id)}}"> Delete my post</a></button>
+                <button type="submit" name="submit" id="submit" class="del" type="button"><a  href="{{url('/delete/'.$post->id)}}"> Delete my post</a></button>
                 
                 
                 @endif
