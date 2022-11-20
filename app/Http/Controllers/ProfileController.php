@@ -10,11 +10,14 @@ use Session;
 
 class ProfileController extends Controller
 {
+
+    function edit($id){
+        $profile = Profile::find($id);
+        return view('edit-profile', compact('profile'));
+    }
     
 function add(Request $request){
 $id = Session::get('id');
-
-
 
     $post = new Post([
         'url' => $request->get('url'),

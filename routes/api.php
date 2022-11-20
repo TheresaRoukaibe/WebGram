@@ -26,4 +26,5 @@ Route::group(["prefix"=> "v0.1"], function(){
     Route::post("/register",[ProfileController::class, "register"] );
     Route::post("/login", [ProfileController::class, "login"]);
     Route::post("/add", [ProfileController::class, "add"]);
+    Route::post("/edit", [ProfileController::class, "edit"]);
 });

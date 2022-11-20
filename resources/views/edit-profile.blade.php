@@ -9,7 +9,8 @@
 	</head>
 	<body>
 		<div class="wrapper">
-            <form action="POST" id="wizard">
+            <form action="{{url('/edit-profile/'.$profile->id)}}" method="POST">
+                @csrf
         		<!-- SECTION 1 -->
                 <h4></h4>
                 <section>
@@ -17,17 +18,17 @@
                 	<div class="form-row">
                             <div class="form-group">
                                 <label for="first_name">First name</label>
-                                <input type="text" class="form-input" name="first_name" id="first_name" />
+                                <input type="text" value="{{old('fname') ?? $profile->fname}}" class="form-input" name="fname" id="fname" />
                             </div>
                             <div class="form-group">
                                 <label for="last_name">Last name</label>
-                                <input type="text" class="form-input" name="last_name" id="last_name" />
+                                <input type="text" value="{{old('lname') ?? $profile->lname}}" class="form-input" name="lname" id="lname" />
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group form-icon">
                                 <label for="birth_date">Birth date</label>
-                                <input type="text" class="form-input" name="birth_date" id="birth_date" placeholder="MM-DD-YYYY" />
+                                <input type="text" value="{{old('birthdate') ?? $profile->birthdate}}" class="form-input" name="birthdate" id="birthdate" placeholder="MM-DD-YYYY" />
                             </div>
                             <div class="form-radio">
                                 <label for="gender">Gender</label>
@@ -42,18 +43,9 @@
                         </div>
                         <div class="form-group">
                             <label for="phone_number">Phone number</label>
-                            <input type="number" class="form-input" name="phone_number" id="phone_number" />
+                            <input type="number" value="{{old('number') ?? $profile->number}}" class="form-input" name="number" id="number" />
                         </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="text">Email</label>
-                                <input type="text" class="form-input" name="email" id="email"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-input" name="password" id="password"/>
-                            </div>
-                        </div>
+                       
                         
                         <div class="form-group">
                             <input type="submit" name="submit" id="submit" class="form-submit" value="Edit"/>

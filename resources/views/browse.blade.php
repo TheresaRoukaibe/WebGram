@@ -19,7 +19,7 @@
         <div class="top-content">
             <h3> Feed</h3>
             <div class="profile">
-            <label for="check2"> <a  href="/profile"> Edit Your Profile </a> </label>
+            <label for="check2"> <a  href="{{url('/edit-profile/'.Session::get('id'))}}"> Edit Your Profile </a> </label>
 </div>
         </div>
 
