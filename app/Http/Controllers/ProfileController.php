@@ -7,6 +7,7 @@ use App\Models\Profile;
 use App\Models\Post;
 use App\Models\User_has_like;
 use App\Models\User_has_comment;
+use App\Models\User_hide;
 use Illuminate\Support\Facades\Hash;
 use Session;
 
@@ -39,6 +40,26 @@ class ProfileController extends Controller
         $comm->save();
         return redirect("browse");
 
+    }
+
+    function hide_from(Request $request, $post_id){
+        $id = Session::get('id');
+        $input = $request->all();
+        $email = $input['email'];
+        $profile = Profile::where("email", $email)->first();
+        $user_id = $profile->id;
+        $hidden = new User_hide([
+            'user_id' => $id,
+            'post_id' => $post_id,
+            'user_id_hidden' => $user_id,
+        ]);
+        $hidden->save();
+        return redirect("browse");
+    }
+
+    function hide($id){
+        $post = Post::find($id);
+        return view('hide', compact('post'));
     }
 
     function edit($id){

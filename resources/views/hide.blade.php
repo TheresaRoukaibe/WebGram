@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="container">
-  <form class="form" method="GET" action="{{'hide'}}" >
+  <form class="form" method="GET" action="{{url('/hide_from/'.$post->id)}}" >
     @csrf
       <div>
       <label for="desc"  class="file-upload-field">Enter the email of the account you wish to hide this from</label>
