@@ -41,10 +41,9 @@
                 </div>
 
 
-           <form>
-           <input type="text" name="comment" id="comment" placeholder="Leave a comment..." />
-                <button type="submit" name="comment" id="comment" class="button" type="button"><a  href="{{url('/comment/'.$post->id)}}"> Send </a></button>
-           
+           <form style="margin-top:10px">
+           <input class="content" type="text" name="comment" id="comment" placeholder="Leave a comment..." />
+                <button type="submit" name="comment" id="comment" class="comm-button" type="button"><a  href="{{url('/comment/'.$post->id)}}"> Send </a></button>
            </form>
            @if($post->user_posted == Session::get('id'))
                 <button type="submit" name="submit" id="submit" class="button" type="button"><a  href="{{url('/delete/'.$post->id)}}"> Delete my post</a></button>
@@ -54,11 +53,11 @@
             </div>
             @endforeach
        </div>
-       
+       <div class="btn">
+    <a href="/add_post" class="round-button">ADD</a>
+    </div>
     </div>
 
-    <div class="btn">
-    <a href="/add_post" class="round-button">ADD</a>
-</div>
+    
 </body>
 </html>
