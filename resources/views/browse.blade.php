@@ -37,10 +37,10 @@
             
                 <div>
                 <h6> {{$post->like_count}} <h6>
-                <button type="submit" name="like" id="like" class="button" type="button"><a  href="{{url('/like/'.$post->id)}}"> Like </a></button>
+                <button type="submit" name="like" id="like" class="like-button" type="button"><a  href="{{url('/like/'.$post->id)}}"> Like </a></button>
                 </div>
 
-                
+
            <form>
            <input type="text" name="comment" id="comment" placeholder="Leave a comment..." />
                 <button type="submit" name="comment" id="comment" class="button" type="button"><a  href="{{url('/comment/'.$post->id)}}"> Send </a></button>
